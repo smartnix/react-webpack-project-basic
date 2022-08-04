@@ -5,7 +5,7 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div><h1>APP</h1></div>
+    <div><h1>APP1</h1></div>
   )
 }
 
