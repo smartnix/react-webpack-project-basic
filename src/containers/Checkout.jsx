@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/Checkout.css';
 
-
 const Checkout = () => {
   return (
     <div className='Checkout'>
