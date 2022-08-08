@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import '../styles/components/Payment.css';
 import {AppContext} from '../context/AppContext';
-import { PayPalButton } from 'react-paypal-button-v2';
 import { useNavigate } from 'react-router-dom';
+import { PayPalButtons } from '@paypal/react-paypal-js';
 
 const Payment = () => {
   
@@ -71,15 +71,16 @@ const Payment = () => {
             </div>  
           ))}
         <div className="Payment-button">
-           <PayPalButton
-            paypalOptions={paypalOptions}
-            buttonStyles={buttonStyles}
-            createOrder={(data, actions) => createOrder(data, actions)}
-            onApprove={(data, actions) => onApprove(data, actions)}
-            onError={(error) => console.log(error)}
-            onCancel={data => console.log(data)}
-           >
-            </PayPalButton>  
+            <PayPalButtons
+              style={buttonStyles}
+              createOrder={(data, actions) => createOrder(data, actions)}
+              paypalOptions={paypalOptions}
+              buttonStyles={buttonStyles}
+              onApprove={(data, actions) => onApprove(data, actions)}
+              onError={(error) => console.log(error)}
+              onCancel={data => console.log(data)}
+            >
+            </PayPalButtons>
         </div>
       </div>
     </div>

@@ -25,8 +25,8 @@ const Information = () => {
       phone:formData.get('phone'),
     }
     addToBuyer(buyer);
-    // navigate('/checkout/payment');
-    navigate('/checkout/success');
+     navigate('/checkout/payment');
+    //navigate('/checkout/success');
   
   }
 
