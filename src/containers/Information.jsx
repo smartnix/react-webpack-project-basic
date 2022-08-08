@@ -9,7 +9,7 @@ const Information = () => {
   const {state:{cart}, addToBuyer} = useContext(AppContext);
 
   const form  = useRef(null);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -17,7 +17,7 @@ const Information = () => {
     const buyer = {
       name:formData.get('name') ,
       email:formData.get('email') ,
-      adress:formData.get('adress'),
+      address:formData.get('address'),
       apto:formData.get('apto'),
       city:formData.get('city'),
       country:formData.get('country'),
@@ -25,7 +25,8 @@ const Information = () => {
       phone:formData.get('phone'),
     }
     addToBuyer(buyer);
-    history('/checkout/payment');
+    // navigate('/checkout/payment');
+    navigate('/checkout/success');
   
   }
 
